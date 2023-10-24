@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+struct PDFPreviewView: View {
+  var pdfURL: URL
+  
+  var body: some View {
+    DocumentPreviewView(previewItemURL: pdfURL)
+      .navigationBarTitle(Text("Preview"))
+      .background(Color.white)
+  }
+}
+
 struct RoundedCorner: Shape {
   var radius: CGFloat = .infinity
   var corners: UIRectCorner = .allCorners
